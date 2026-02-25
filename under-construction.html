@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GRACE J. PARK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red: #b03030;
+      --gray: #999;
+      --light-gray: #bbb;
+      --black: #1a1a1a;
+      --white: #ffffff;
+      --font-body: 'Raleway', sans-serif;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--font-body);
+      font-weight: 300;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 48px 32px;
+    }
+
+    /* ── PAGE TITLE ── */
+    .page-title {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      color: var(--red);
+      min-height: 20px;
+    }
+
+    /* ── MAIN IMAGE AREA ── */
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 0 60px;
+    }
+
+    .home-image-wrap {
+      width: 100%;
+      max-width: 1100px;
+      position: relative;
+      cursor: default;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #6b7280;
+      opacity: 0.5;
+      display: block;
+    }
+
+    /* ── UNDER CONSTRUCTION OVERLAY ── */
+    .uc-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+    }
+
+    .home-image-wrap:hover .uc-overlay {
+      opacity: 1;
+    }
+
+    .uc-text {
+      font-family: var(--font-body);
+      font-weight: 300;
+      /* 2× the size of the footer site name (13px) */
+      font-size: 26px;
+      letter-spacing: 0.12em;
+      color: var(--white);
+      text-transform: uppercase;
+      user-select: none;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      display: flex;
+      align-items: baseline;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .site-name {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    /* Nav groups — disabled, no pointer events */
+    .nav-group {
+      position: relative;
+      display: inline-block;
+    }
+
+    .nav-trigger {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      color: var(--light-gray);
+      cursor: default;
+      user-select: none;
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Red strikethrough on hover */
+    .nav-trigger::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 1px;
+      background: var(--red);
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.25s ease;
+    }
+
+    .nav-trigger:hover {
+      color: var(--light-gray); /* stays gray, no red color change */
+    }
+
+    .nav-trigger:hover::after {
+      transform: scaleX(1);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="page-title">[ ]</div>
+
+    <div class="main-content">
+      <div class="home-image-wrap">
+        <div class="image-placeholder"></div>
+        <div class="uc-overlay">
+          <span class="uc-text">[ under construction ]</span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <span class="site-name">GRACE J. PARK</span>
+
+      <div class="nav-group">
+        <span class="nav-trigger">[ ]</span>
+      </div>
+      <div class="nav-group">
+        <span class="nav-trigger">[=|=]</span>
+      </div>
+      <div class="nav-group">
+        <span class="nav-trigger">[__]</span>
+      </div>
+      <div class="nav-group">
+        <span class="nav-trigger">[ : : : : ]</span>
+      </div>
+      <div class="nav-group">
+        <span class="nav-trigger">[wwwwwh]</span>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
